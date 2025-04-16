@@ -2,174 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>designdrops.studio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      color: #333;
-      background-color: #fff;
-    }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    header {
-      background-color: #004aad;
-      padding: 20px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      height: 50px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      background-color: #f5f5f5;
-      padding: 100px 0;
-      text-align: center;
-    }
-    .hero h1 {
-      color: #004aad;
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 1.2em;
-      color: #666;
-    }
-    .services {
-      padding: 80px 0;
-      background-color: #fff;
-    }
-    .services h2 {
-      text-align: center;
-      color: #004aad;
-      margin-bottom: 60px;
-    }
-    .service-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: center;
-    }
-    .service {
-      flex: 1 1 300px;
-      max-width: 300px;
-      text-align: center;
-    }
-    .service h3 {
-      color: #004aad;
-      margin-bottom: 10px;
-    }
-    .service p {
-      color: #555;
-    }
-    .contact {
-      background-color: #f5f5f5;
-      padding: 80px 0;
-      text-align: center;
-    }
-    .contact h2 {
-      color: #004aad;
-      margin-bottom: 20px;
-    }
-    .contact p {
-      color: #666;
-      margin-bottom: 40px;
-    }
-    .social-links a {
-      display: inline-block;
-      margin: 0 15px;
-    }
-    .social-links img {
-      width: 30px;
-      height: 30px;
-      vertical-align: middle;
-    }
-    footer {
-      background-color: #004aad;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
   </style>
 </head>
-<body>
-  <header class="container">
-    <img src="https://i.postimg.cc/ZRWRCV5h/DESIGNDROPS1.png" alt="designdrops.studio logo" class="logo" />
-    <nav>
-      <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<body class="bg-white text-gray-800">
+  <!-- Header / Hero -->
+  <header class="relative bg-cover bg-center h-screen" style="background-image: url('https://images.unsplash.com/photo-1552793494-111afe03d0ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <nav class="relative z-10 flex items-center justify-between px-8 py-6">
+      <div class="flex items-center space-x-3">
+        <img src="https://i.postimg.cc/ZRWRCV5h/DESIGNDROPS1.png" alt="Logo" class="w-14 h-14">
+        <span class="text-white font-bold text-2xl">designdrops</span>
+      </div>
+      <div class="flex items-center space-x-5">
+        <a href="#services" class="text-white font-medium hover:underline">Services</a>
+        <a href="#contact" class="text-white font-medium hover:underline">Contact</a>
+      </div>
     </nav>
+    <div class="relative z-10 flex flex-col items-center justify-center text-center h-[calc(100vh-96px)] px-4">
+      <h1 class="text-white text-5xl md:text-6xl font-bold drop-shadow-lg">We Design & Build Beautiful Websites</h1>
+      <p class="text-gray-200 text-lg mt-4 max-w-xl mx-auto">At designdrops.studio, we craft digital experiences that captivate and convert.</p>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>We Design & Build Beautiful Websites</h1>
-      <p>At designdrops.studio, we craft digital experiences that captivate and convert.</p>
+  <!-- Services Section -->
+  <section id="services" class="py-20 px-6 bg-gray-100 text-center">
+    <h2 class="text-3xl font-bold text-blue-900 mb-6">Our Services</h2>
+    <p class="max-w-2xl mx-auto text-gray-600">We specialize in custom website design, responsive development, branding, and user experience optimization.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-6 bg-white text-center">
+    <h2 class="text-3xl font-bold text-blue-900 mb-6">Contact Us</h2>
+    <div class="flex justify-center space-x-6">
+      <a href="https://www.instagram.com/designdrops.studio/?hl=en" target="_blank">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iLTIgLTIgMjQgMjQiPgoJPGcgZmlsbD0iY3VycmVudENvbG9yIj4KCQk8cGF0aCBkPSJNMTQuMDE3IDBoLTguMDdBNS45NTQgNS45NTQgMCAwIDAgMCA1Ljk0OHY4LjA3YTUuOTU0IDUuOTU0IDAgMCAwIDUuOTQ4IDUuOTQ3aDguMDdhNS45NTQgNS45NTQgMCAwIDAgNS45NDctNS45NDh2LTguMDdBNS45NTQgNS45NTQgMCAwIDAgMTQuMDE3IDBtMy45NCAxNC4wMTdhMy45NCAzLjk0IDAgMCAxLTMuOTQgMy45NGgtOC4wN2EzLjk0IDMuOTQgMCAwIDEtMy45MzktMy45NHYtOC4wN2EzLjk0IDMuOTQgMCAwIDEgMy45NC0zLjkzOWg4LjA3YTMuOTQgMy45NCAwIDAgMSAzLjkzOSAzLjk0djguMDd6IiAvPgoJCTxwYXRoIGQ9Ik05Ljk4MiA0LjgxOUE1LjE3IDUuMTcgMCAwIDAgNC44MiA5Ljk4MmE1LjE3IDUuMTcgMCAwIDAgNS4xNjMgNS4xNjRhNS4xNyA1LjE3IDAgMCAwIDUuMTY0LTUuMTY0QTUuMTcgNS4xNyAwIDAgMCA5Ljk4MiA0Ljgyem0wIDguMzE5YTMuMTU1IDMuMTU1IDAgMSAxIDAtNi4zMWEzLjE1NSAzLjE1NSAwIDAgMSAwIDYuMzEiIC8+CgkJPGNpcmNsZSBjeD0iMTUuMTU2IiBjeT0iNC44NTgiIHI9IjEuMjM3IiAvPgoJPC9nPgo8L3N2Zz4=" class="w-8 h-8" alt="Instagram">
+      </a>
+      <a href="https://x.com/designdrops_?s=11" target="_blank">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij4KCTxnIGZpbGw9Im5vbmUiPgoJCTxnIGNsaXAtcGF0aD0idXJsKCNwcmltZVR3aXR0ZXIwKSI+CgkJCTxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTExLjAyNS42NTZoMi4xNDdMOC40ODIgNi4wM0wxNCAxMy4zNDRIOS42OEw2LjI5NCA4LjkwOWwtMy44NyA0LjQzNUguMjc1bDUuMDE2LTUuNzVMMCAuNjU3aDQuNDNMNy40ODYgNC43MXptLS43NTUgMTEuNGgxLjE5TDMuNzggMS44NzdIMi41MDR6IiAvPgoJCTwvZz4KCQk8ZGVmcz4KCQkJPGNsaXBQYXRoIGlkPSJwcmltZVR3aXR0ZXIwIj4KCQkJCTxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDBoMTR2MTRIMHoiIC8+CgkJCTwvY2xpcFBhdGg+CgkJPC9kZWZzPgoJPC9nPgo8L3N2Zz4=" class="w-8 h-8" alt="Twitter">
+      </a>
+      <a href="https://www.facebook.com/share/18YQKUzkbp/?mibextid=wwXIfr" target="_blank">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTIyIDEyYzAtNS41Mi00LjQ4LTEwLTEwLTEwUzIgNi40OCAyIDEyYzAgNC44NCAzLjQ0IDguODcgOCA5LjhWMTVIOHYtM2gyVjkuNUMxMCA3LjU3IDExLjU3IDYgMTMuNSA2SDE2djNoLTJjLS41NSAwLTEgLjQ1LTEgMXYyaDN2M2gtM3Y2Ljk1YzUuMDUtLjUgOS00Ljc2IDktOS45NSIgLz4KPC9zdmc+" class="w-8 h-8" alt="Facebook">
+      </a>
     </div>
   </section>
 
-  <section id="services" class="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="service-list">
-        <div class="service">
-          <h3>Custom Website Design</h3>
-          <p>Tailored designs that reflect your brand's identity and engage your audience.</p>
-        </div>
-        <div class="service">
-          <h3>Responsive Development</h3>
-          <p>Websites that look and function flawlessly on all devices.</p>
-        </div>
-        <div class="service">
-          <h3>SEO Optimization</h3>
-          <p>Enhancing your online presence to attract and retain customers.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Let's create something amazing together.</p>
-      <div class="social-links">
-        <a href="https://www.instagram.com/designdrops.studio/?hl=en" target="_blank">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iLTIgLTIgMjQgMjQiPgoJPGcgZmlsbD0iY3VycmVudENvbG9yIj4KCQk8cGF0aCBkPSJNMTQuMDE3IDBoLTguMDdBNS45NTQgNS45NTQgMCAwIDAgMCA1Ljk0OHY4LjA3YTUuOTU0IDUuOTU0IDAgMCAwIDUuOTQ4IDUuOTQ3aDguMDdhNS45NTQgNS45NTQgMCAwIDAgNS45NDctNS45NDh2LTguMDdBNS45NTQgNS45NTQgMCAwIDAgMTQuMDE3IDBtMy45NCAxNC4wMTdhMy45NCAzLjk0IDAgMCAxLTMuOTQgMy45NGgtOC4wN2EzLjk0IDMuOTQgMCAwIDEtMy45MzktMy45NHYtOC4wN2EzLjk0IDMuOTQgMCAwIDEgMy45NC0zLjkzOWg4LjA3YTMuOTQgMy45NCAwIDAgMSAzLjkzOSAzLjk0djguMDd6IiAvPgoJCTxwYXRoIGQ9Ik05Ljk4MiA0LjgxOUE1LjE3IDUuMTcgMCAwIDAgNC44MiA5Ljk4MmE1LjE3IDUuMTcgMCAwIDAgNS4xNjMgNS4xNjRhNS4xNyA1LjE3IDAgMCAwIDUuMTY0LTUuMTY0QTUuMTcgNS4xNyAwIDAgMCA5Ljk4MiA0Ljgyem0wIDguMzE5YTMuMTU1IDMuMTU1IDAgMSAxIDAtNi4zMWEzLjE1NSAzLjE1NSAwIDAgMSAwIDYuMzEiIC8+CgkJPGNpcmNsZSBjeD0iMTUuMTU2IiBjeT0iNC44NTgiIHI9IjEuMjM3IiAvPgoJPC9nPgo8L3N2Zz4=" alt="Instagram" />
-        </a>
-        <a href="https://x.com/designdrops_?s=11" target="_blank">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij4KCTxnIGZpbGw9Im5vbmUiPgoJCTxnIGNsaXAtcGF0aD0idXJsKCNwcmltZVR3aXR0ZXIwKSI+CgkJCTxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTExLjAyNS42NTZoMi4xNDdMOC40ODIgNi4wM0wxNCAxMy4zNDRIOS42OEw2LjI5NCA4LjkwOWwtMy44NyA0LjQzNUguMjc1bDUuMDE2LTUuNzVMMCAuNjU3aDQuNDNMNy40ODYgNC43MXptLS43NTUgMTEuNGgxLjE5TDMuNzggMS44NzdIMi41MDR6IiAvPgoJCTwvZz4KCQk8ZGVmcz4KCQkJPGNsaXBQYXRoIGlkPSJwcmltZVR3aXR0ZXIwIj4KCQkJCTxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDBoMTR2MTRIMHoiIC8+CgkJCTwvY2xpcFBhdGg+CgkJPC9kZWZzPgoJPC9nPgo8L3N2Zz4=" alt="Twitter" />
-        </a>
-        <a href="https://www.facebook.com/share/18YQKUzkbp/?mibextid=wwXIfr" target="_blank">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCTxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTIyIDEyYzAtNS41Mi00LjQ4LTEwLTEwLTEwUzIgNi40OCAyIDEyYzAgNC44NCAzLjQ0IDguODcgOCA5LjhWMTVIOHYtM2gyVjkuNUMxMCA3LjU3IDExLjU3IDYgMTMuNSA2SDE2djNoLTJjLS41NSAwLTEgLjQ1LTEgMXYyaDN2M2gtM3Y2Ljk1YzUuMDUtLjUgOS00Ljc2IDktOS45NSIgLz4KPC9zdmc+" alt="Facebook" />
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 designdrops.studio. All rights reserved.</p>
-    </div>
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-4 text-center text-sm text-gray-600">
+    © 2025 designdrops.studio — All rights reserved.
   </footer>
 </body>
 </html>
