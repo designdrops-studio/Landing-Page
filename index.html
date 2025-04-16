@@ -90,6 +90,23 @@
         from { opacity: 0; transform: translateY(30px); }
         to { opacity: 1; transform: translateY(0); }
       }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 1.5rem;
+      }
+
+      .social-icons a img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+      }
+
+      .social-icons a:hover img {
+        transform: scale(1.1);
+      }
     </style>
   </head>
   <body>
@@ -112,7 +129,18 @@
 
     <section class="content" id="contact">
       <h2>Contact Us</h2>
-      <p>Let's build something amazing together.</p>
+      <p>Let’s build something amazing together. Reach us on:</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/designdrops.studio/?hl=en" target="_blank" rel="noopener">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iLTIgLTIgMjQgMjQiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTE0LjAxNyAwaC04LjA3QTUuOTU0IDUuOTU0IDAgMCAwIDAgNS45NDh2OC4wN2E1Ljk1NCA1Ljk1NCAwIDAgMCA1Ljk0OCA1Ljk0N2g4LjA3YTUuOTU0IDUuOTU0IDAgMCAwIDUuOTQ3LTUuOTQ4di04LjA3QTUuOTU0IDUuOTU0IDAgMCAwIDE0LjAxNyAwbTMuOTQgMTQuMDE3YTMuOTQgMy45NCAwIDAgMS0zLjk0IDMuOTRoLTguMDdhMy45NCAzLjk0IDAgMCAxLTMuOTM5LTMuOTR2LTguMDdhMy45NCAzLjk0IDAgMCAxIDMuOTQtMy45MzloOC4wN2EzLjk0IDMuOTQgMCAwIDEgMy45MzkgMy45NHY4LjA3eiIvPjxwYXRoIGQ9Ik05Ljk4MiA0LjgxOUE1LjE3IDUuMTcgMCAwIDAgNC44MiA5Ljk4MmE1LjE3IDUuMTcgMCAwIDAgNS4xNjMgNS4xNjRhNS4xNyA1LjE3IDAgMCAwIDUuMTY0LTUuMTY0QTUuMTcgNS4xNyAwIDAgMCA5Ljk4MiA0LjgyejBtMCA4LjMxOWEzLjE1NSAzLjE1NSAwIDEgMSAwLTYuMzFhMy4xNTUgMy4xNTUgMCAwIDEgMCA2LjMxIi8+PGNpcmNsZSBjeD0iMTUuMTU2IiBjeT0iNC44NTgiIHI9IjEuMjM3Ii8+PC9zdmc+" alt="Instagram" />
+        </a>
+        <a href="https://x.com/designdrops_?s=11" target="_blank" rel="noopener">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xMS4wMjUuNjU2aDIuMTQ3TDguNDgyIDYuMDNMMTQgMTMuMzQ0SDkuNjhMNi4yOTQgOC45MDlsLTMuODcgNC40MzVILjI3NWw1LjAxNi01Ljc1TDAgLjY1N2g0LjQzTDUuNDg2IDQuNzF6bS0uNzU1IDExLjRoMS4xOUwzLjc4IDEuODg3SDIuNTA0eiIvPjwvc3ZnPg==" alt="Twitter" />
+        </a>
+        <a href="https://www.facebook.com/share/18YQKUzkbp/?mibextid=wwXIfr" target="_blank" rel="noopener">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMiAxMmMwLTUuNTItNC40OC0xMC0xMC0xMFMzLjUgNi40OCAzLjUgMTJjMCA0Ljg0IDMuNDQgOC44NyA4IDkuOFYxNUg4di0zaDJWOS41QzEwIDcuNTcgMTEuNTcgNiAxMy41IDZIMTZ2M2gtMmMtLjU1IDAtMSAuNDUtMSAxVjEyaDN2M2gtM3Y2Ljk1YzUuMDUtLjUgOS00Ljc2IDktOS45NSIvPjwvc3ZnPg==" alt="Facebook" />
+        </a>
+      </div>
     </section>
   </body>
 </html>
