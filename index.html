@@ -90,6 +90,23 @@
         from { opacity: 0; transform: translateY(30px); }
         to { opacity: 1; transform: translateY(0); }
       }
+
+      footer {
+        background-color: #004aad;
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem;
+        animation: fadeInUp 1s ease forwards;
+      }
+
+      footer a img {
+        margin: 0 1rem;
+        transition: transform 0.3s ease;
+      }
+
+      footer a img:hover {
+        transform: scale(1.2);
+      }
     </style>
   </head>
   <body>
@@ -114,5 +131,20 @@
       <h2>Contact Us</h2>
       <p>Let's build something amazing together.</p>
     </section>
+
+    <footer>
+      <p>Follow us on</p>
+      <div style="margin-top: 1rem;">
+        <a href="https://instagram.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="30" height="30">
+        </a>
+        <a href="https://facebook.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="30" height="30">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="30" height="30">
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
