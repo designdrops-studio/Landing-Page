@@ -2,19 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>designdrops.studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
+      :root {
+        --bg: #f6f6f6;
+        --text: #333;
+        --header: #004aad;
+        --link-hover: #ffdd57;
+      }
+
+      body.dark {
+        --bg: #121212;
+        --text: #eaeaea;
+        --header: #1e1e1e;
+        --link-hover: #00d4ff;
+      }
+
       body {
         margin: 0;
         font-family: 'Inter', sans-serif;
-        background-color: #f6f6f6;
-        color: #333;
+        background-color: var(--bg);
+        color: var(--text);
+        transition: all 0.3s ease;
       }
 
       header {
-        background-color: #004aad;
+        background-color: var(--header);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -48,7 +63,23 @@
       }
 
       nav a:hover {
-        color: #ffdd57;
+        color: var(--link-hover);
+      }
+
+      .theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: 1rem;
+        padding: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .theme-toggle img {
+        width: 24px;
+        height: 24px;
+        filter: invert(100%);
       }
 
       .hero {
@@ -107,15 +138,28 @@
       .social-icons a:hover img {
         transform: scale(1.1);
       }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.9rem;
+        color: var(--text);
+        border-top: 1px solid #ccc;
+      }
     </style>
   </head>
   <body>
     <header>
       <img class="logo" src="https://i.postimg.cc/ZRWRCV5h/DESIGNDROPS1.png" alt="designdrops logo" />
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div style="display: flex; align-items: center;">
+        <nav>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark Mode">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGZpbGwtb3BhY2l0eT0iMC4xNiIgZD0iTTEwLjQxIDEzLjI4QzcuMzMyIDEwLjIwNSA2LjcxNiA1LjY5MyA4LjM1NyAyYy0xLjIzLjQxLTIuMjU2IDEuMjMtMy4yODEgMi4yNTZhMTAuNCAxMC40IDAgMCAwIDAgMTQuNzY4YzQuMTAyIDQuMTAyIDEwLjQ2IDMuODk3IDE0LjU2Mi0uMjA1YzEuMDI2LTEuMDI2IDEuODQ2LTIuMDUxIDIuMjU2LTMuMjgyYy0zLjg5NiAxLjQzNi04LjQwOS44Mi0xMS40ODYtMi4yNTYiLz48cGF0aCBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0iTTEwLjQxIDEzLjI4QzcuMzMyIDEwLjIwNSA2LjcxNiA1LjY5MyA4LjM1NyAyYy0xLjIzLjQxLTIuMjU2IDEuMjMtMy4yODEgMi4yNTZhMTAuNCAxMC40IDAgMCAwIDAgMTQuNzY4YzQuMTAyIDQuMTAyIDEwLjQ2IDMuODk3IDE0LjU2Mi0uMjA1YzEuMDI2LTEuMDI2IDEuODQ2LTIuMDUxIDIuMjU2LTMuMjgyYy0zLjg5NiAxLjQzNi04LjQwOS44Mi0xMS40ODYtMi4yNTYiLz48L2c+PC9zdmc+" alt="Dark Mode" />
+        </button>
+      </div>
     </header>
 
     <section class="hero">
@@ -132,15 +176,25 @@
       <p>Let’s build something amazing together. Reach us on:</p>
       <div class="social-icons">
         <a href="https://www.instagram.com/designdrops.studio/?hl=en" target="_blank" rel="noopener">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iLTIgLTIgMjQgMjQiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTE0LjAxNyAwaC04LjA3QTUuOTU0IDUuOTU0IDAgMCAwIDAgNS45NDh2OC4wN2E1Ljk1NCA1Ljk1NCAwIDAgMCA1Ljk0OCA1Ljk0N2g4LjA3YTUuOTU0IDUuOTU0IDAgMCAwIDUuOTQ3LTUuOTQ4di04LjA3QTUuOTU0IDUuOTU0IDAgMCAwIDE0LjAxNyAwbTMuOTQgMTQuMDE3YTMuOTQgMy45NCAwIDAgMS0zLjk0IDMuOTRoLTguMDdhMy45NCAzLjk0IDAgMCAxLTMuOTM5LTMuOTR2LTguMDdhMy45NCAzLjk0IDAgMCAxIDMuOTQtMy45MzloOC4wN2EzLjk0IDMuOTQgMCAwIDEgMy45MzkgMy45NHY4LjA3eiIvPjxwYXRoIGQ9Ik05Ljk4MiA0LjgxOUE1LjE3IDUuMTcgMCAwIDAgNC44MiA5Ljk4MmE1LjE3IDUuMTcgMCAwIDAgNS4xNjMgNS4xNjRhNS4xNyA1LjE3IDAgMCAwIDUuMTY0LTUuMTY0QTUuMTcgNS4xNyAwIDAgMCA5Ljk4MiA0LjgyejBtMCA4LjMxOWEzLjE1NSAzLjE1NSAwIDEgMSAwLTYuMzFhMy4xNTUgMy4xNTUgMCAwIDEgMCA2LjMxIi8+PGNpcmNsZSBjeD0iMTUuMTU2IiBjeT0iNC44NTgiIHI9IjEuMjM3Ii8+PC9zdmc+" alt="Instagram" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
         </a>
         <a href="https://x.com/designdrops_?s=11" target="_blank" rel="noopener">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xMS4wMjUuNjU2aDIuMTQ3TDguNDgyIDYuMDNMMTQgMTMuMzQ0SDkuNjhMNi4yOTQgOC45MDlsLTMuODcgNC40MzVILjI3NWw1LjAxNi01Ljc1TDAgLjY1N2g0LjQzTDUuNDg2IDQuNzF6bS0uNzU1IDExLjRoMS4xOUwzLjc4IDEuODg3SDIuNTA0eiIvPjwvc3ZnPg==" alt="Twitter" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023.svg" alt="Twitter" />
         </a>
         <a href="https://www.facebook.com/share/18YQKUzkbp/?mibextid=wwXIfr" target="_blank" rel="noopener">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0yMiAxMmMwLTUuNTItNC40OC0xMC0xMC0xMFMzLjUgNi40OCAzLjUgMTJjMCA0Ljg0IDMuNDQgOC44NyA4IDkuOFYxNUg4di0zaDJWOS41QzEwIDcuNTcgMTEuNTcgNiAxMy41IDZIMTZ2M2gtMmMtLjU1IDAtMSAuNDUtMSAxVjEyaDN2M2gtM3Y2Ljk1YzUuMDUtLjUgOS00Ljc2IDktOS45NSIvPjwvc3ZnPg==" alt="Facebook" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
         </a>
       </div>
     </section>
+
+    <footer>
+      &copy; 2025 designdrops.studio — All rights reserved.
+    </footer>
+
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle('dark');
+      }
+    </script>
   </body>
 </html>
