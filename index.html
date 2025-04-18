@@ -1,100 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Designdrops Studio</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>designdrops.studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #f6f6f6;
+        --text: #333;
+        --header: #004aad;
+        --link-hover: #ffdd57;
+      }
 
-    body {
-      background-color: #f9f9f9;
-    }
+      body.dark {
+        --bg: #121212;
+        --text: #eaeaea;
+        --header: #1e1e1e;
+        --link-hover: #00d4ff;
+      }
 
-    .section {
-      background-image: url('https://images.unsplash.com/photo-1744309544231-b3e8ab25ba10?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-      background-size: cover;
-      background-position: center;
-      padding: 100px 20px;
-      color: #ffffff;
-      text-align: center;
-      position: relative;
-    }
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        transition: all 0.3s ease;
+      }
 
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 80px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      border-radius: 16px;
-    }
+      header {
+        background-color: var(--header);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        animation: slideDown 0.6s ease-out;
+      }
 
-    .content-block {
-      margin-bottom: 60px;
-    }
+      @keyframes slideDown {
+        from { transform: translateY(-100%); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
 
-    .content-block h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    }
+      .logo {
+        height: 90px;
+        transition: transform 0.3s ease;
+      }
 
-    .content-block p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
+      .logo:hover {
+        transform: scale(1.05);
+      }
 
-    .social-icons {
-      margin-top: 20px;
-    }
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 2rem;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
 
-    .social-icons a {
-      display: inline-block;
-      margin: 0 10px;
-      text-decoration: none;
-      color: white;
-      font-size: 24px;
-    }
+      nav a:hover {
+        color: var(--link-hover);
+      }
 
-    .social-icons img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      transition: transform 0.3s ease;
-    }
+      .theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: 1rem;
+        padding: 0;
+        display: flex;
+        align-items: center;
+      }
 
-    .social-icons img:hover {
-      transform: scale(1.1);
-    }
-  </style>
-</head>
-<body>
+      .theme-toggle img {
+        width: 24px;
+        height: 24px;
+        filter: invert(100%);
+      }
 
-  <section class="section">
-    <div class="overlay">
-      
-      <div class="content-block">
-        <h2>Our Services</h2>
-        <p>At designdrops.studio, we craft digital experiences that captivate and convert.</p>
+      .hero {
+        background: url('https://images.unsplash.com/photo-1552793494-111afe03d0ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        animation: fadeIn 1s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        animation: popUp 1s ease-in-out;
+      }
+
+      @keyframes popUp {
+        0% { transform: scale(0.8); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+
+      .content {
+        padding: 6rem 2rem;
+        text-align: center;
+        animation: fadeInUp 1s ease forwards;
+      }
+
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 1.5rem;
+      }
+
+      .social-icons a img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+      }
+
+      .social-icons a:hover img {
+        transform: scale(1.1);
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.9rem;
+        color: var(--text);
+        border-top: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="https://i.postimg.cc/ZRWRCV5h/DESIGNDROPS1.png" alt="designdrops logo" />
+      <div style="display: flex; align-items: center;">
+        <nav>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark Mode">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGZpbGwtb3BhY2l0eT0iMC4xNiIgZD0iTTEwLjQxIDEzLjI4QzcuMzMyIDEwLjIwNSA2LjcxNiA1LjY5MyA4LjM1NyAyYy0xLjIzLjQxLTIuMjU2IDEuMjMtMy4yODEgMi4yNTZhMTAuNCAxMC40IDAgMCAwIDAgMTQuNzY4YzQuMTAyIDQuMTAyIDEwLjQ2IDMuODk3IDE0LjU2Mi0uMjA1YzEuMDI2LTEuMDI2IDEuODQ2LTIuMDUxIDIuMjU2LTMuMjgyYy0zLjg5NiAxLjQzNi04LjQwOS44Mi0xMS40ODYtMi4yNTYiLz48cGF0aCBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0iTTEwLjQxIDEzLjI4QzcuMzMyIDEwLjIwNSA2LjcxNiA1LjY5MyA4LjM1NyAyYy0xLjIzLjQxLTIuMjU2IDEuMjMtMy4yODEgMi4yNTZhMTAuNCAxMC40IDAgMCAwIDAgMTQuNzY4YzQuMTAyIDQuMTAyIDEwLjQ2IDMuODk3IDE0LjU2Mi0uMjA1YzEuMDI2LTEuMDI2IDEuODQ2LTIuMDUxIDIuMjU2LTMuMjgyYy0zLjg5NiAxLjQzNi04LjQwOS44Mi0xMS40ODYtMi4yNTYiLz48L2c+PC9zdmc+" alt="Dark Mode" />
+        </button>
       </div>
+    </header>
 
-      <div class="content-block">
-        <h2>Contact Us</h2>
-        <p>Let's build something amazing together. Reach us on:</p>
-        <div class="social-icons">
-          <a href="#"><img src="https://img.icons8.com/ios-filled/50/instagram-new.png" alt="Instagram"></a>
-          <a href="#"><img src="https://img.icons8.com/ios-filled/50/twitterx.png" alt="X"></a>
-          <a href="#"><img src="https://img.icons8.com/ios-filled/50/facebook-new.png" alt="Facebook"></a>
-        </div>
+    <section class="hero">
+      <h1>We Design & Build Beautiful Websites</h1>
+    </section>
+
+    <section class="content" id="services">
+      <h2>Our Services</h2>
+      <p>At designdrops.studio, we craft digital experiences that captivate and convert.</p>
+    </section>
+
+    <section class="content" id="contact">
+      <h2>Contact Us</h2>
+      <p>Let’s build something amazing together. Reach us on:</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/designdrops.studio/?hl=en" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+        </a>
+        <a href="https://x.com/designdrops_?s=11" target="_blank" rel="noopener">
+          <img src="https://static.vecteezy.com/system/resources/previews/053/986/348/non_2x/x-twitter-icon-logo-symbol-free-png.png" alt="Twitter" />
+        </a>
+        <a href="https://www.facebook.com/share/18YQKUzkbp/?mibextid=wwXIfr" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+        </a>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <footer>
+      &copy; 2025 designdrops.studio — All rights reserved.
+    </footer>
 
-</body>
+    <script>
+      function toggleTheme() {
+        document.body.classList.toggle('dark');
+      }
+    </script>
+  </body>
 </html>
