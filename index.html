@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Design Drops creates professional websites for creators and businesses. From landing pages to full-scale websites, we've got you covered." />
+  <meta name="keywords" content="web design, landing page, website development, SEO, mobile-optimized websites, custom design" />
+  <meta property="og:title" content="Design Drops - Professional Website Design" />
+  <meta property="og:description" content="Partner with Design Drops to take your brand to the next level with professional-grade websites. Check out our pricing and services." />
+  <meta property="og:image" content="https://i.postimg.cc/FFcgrwGN/Untitleddesign.webp" />
+  <meta property="og:url" content="https://www.designdrops.com" />
   <title>Design Drops</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -118,7 +124,7 @@
     }
     .pricing-image {
       float: right;
-      max-width: 400px;
+      max-width: 100%;
       margin-left: 20px;
       margin-bottom: 20px;
       border-radius: 10px;
@@ -164,6 +170,24 @@
     @keyframes fadeInRight {
       from { opacity: 0; transform: translateX(20px); }
       to { opacity: 1; transform: translateX(0); }
+    }
+
+    /* Media Queries for Mobile */
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+      .flex-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .pricing .flex-row {
+        flex-direction: column;
+      }
+      .pricing-image {
+        float: none;
+        margin: 0 auto;
+      }
     }
   </style>
 </head>
@@ -258,7 +282,9 @@
       </a>
     </div>
   </footer>
+
   <a href="#" class="back-to-top" id="backToTop">↑ Top</a>
+
   <script>
     const backToTop = document.getElementById("backToTop");
     window.addEventListener("scroll", () => {
@@ -267,6 +293,10 @@
       } else {
         backToTop.classList.remove("show");
       }
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   </script>
 </body>
