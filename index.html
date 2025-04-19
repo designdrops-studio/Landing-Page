@@ -1,200 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>designdrops.studio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        --bg: #f6f6f6;
-        --text: #333;
-        --header: #004aad;
-        --link-hover: #ffdd57;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design Drops</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #000;
+      background-color: #fff;
+    }
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: fadeIn 1s ease-out;
+    }
+    .join-btn {
+      background-color: #004AAD;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+    .join-btn:hover {
+      transform: scale(1.05);
+    }
+    .hero-section {
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeInUp 1s ease-out;
+    }
+    .hero-section h1 {
+      color: #004AAD;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+    }
+    .hero-section img {
+      margin-top: 30px;
+      max-width: 100%;
+      border-radius: 10px;
+      animation: fadeIn 2s ease-in;
+    }
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h2 {
+      font-size: 2.2rem;
+      color: #004AAD;
+      margin-bottom: 20px;
+      animation: fadeInLeft 1s ease-out;
+    }
+    .flex-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      flex: 1;
+      min-width: 250px;
+      animation: fadeInUp 0.8s ease-in-out;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .card h3 {
+      margin-top: 15px;
+      font-size: 1.2rem;
+    }
+    .card p {
+      font-size: 1rem;
+    }
+    .pricing .card h3 {
+      color: #004AAD;
+    }
+    .testimonials .card {
+      background-color: #f7f7f7;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+    .socials img {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s ease;
+    }
+    .socials img:hover {
+      transform: scale(1.1);
+    }
+    footer {
+      padding: 30px 40px;
+      text-align: center;
+    }
+    .logo {
+      height: 50px;
+    }
+    .pricing-image {
+      float: right;
+      max-width: 400px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      animation: fadeInRight 1s ease-out;
+    }
+    .pricing .join-btn {
+      display: block;
+      width: fit-content;
+      margin-left: auto;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #004AAD;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50px;
+      font-size: 1rem;
+      text-decoration: none;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      z-index: 1000;
+    }
+    .back-to-top.show {
+      opacity: 1;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.postimg.cc/PxHfmpG6/Untitled.png" alt="Design Drops logo" class="logo" />
+    <a href="https://www.instagram.com/designdrops.studio?igsh=dTIwZGF0bzRyZWVz" class="join-btn">Join us.</a>
+  </header>
 
-      body.dark {
-        --bg: #121212;
-        --text: #eaeaea;
-        --header: #1e1e1e;
-        --link-hover: #00d4ff;
-      }
+  <section class="hero-section">
+    <h1>Professional grade websites.</h1>
+    <p>Partner with us to take your brand to the next level.</p>
+    <img src="https://i.postimg.cc/FFcgrwGN/Untitleddesign.webp" alt="Laptop with website" />
+  </section>
 
-      body {
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        background-color: var(--bg);
-        color: var(--text);
-        transition: all 0.3s ease;
-      }
-
-      header {
-        background-color: var(--header);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        animation: slideDown 0.6s ease-out;
-      }
-
-      @keyframes slideDown {
-        from { transform: translateY(-100%); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-      }
-
-      .logo {
-        height: 90px;
-        transition: transform 0.3s ease;
-      }
-
-      .logo:hover {
-        transform: scale(1.05);
-      }
-
-      nav a {
-        color: white;
-        text-decoration: none;
-        margin-left: 2rem;
-        font-weight: bold;
-        transition: color 0.3s ease;
-      }
-
-      nav a:hover {
-        color: var(--link-hover);
-      }
-
-      .theme-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-        margin-left: 1rem;
-        padding: 0;
-        display: flex;
-        align-items: center;
-      }
-
-      .theme-toggle img {
-        width: 24px;
-        height: 24px;
-        filter: invert(100%);
-      }
-
-      .hero {
-        background: url('https://images.unsplash.com/photo-1552793494-111afe03d0ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-        animation: fadeIn 1s ease-in;
-      }
-
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-
-      .hero h1 {
-        font-size: 3rem;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 1rem 2rem;
-        border-radius: 10px;
-        animation: popUp 1s ease-in-out;
-      }
-
-      @keyframes popUp {
-        0% { transform: scale(0.8); opacity: 0; }
-        100% { transform: scale(1); opacity: 1; }
-      }
-
-      .content {
-        padding: 6rem 2rem;
-        text-align: center;
-        animation: fadeInUp 1s ease forwards;
-      }
-
-      @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-
-      .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        margin-top: 1.5rem;
-      }
-
-      .social-icons a img {
-        width: 40px;
-        height: 40px;
-        transition: transform 0.3s ease;
-      }
-
-      .social-icons a:hover img {
-        transform: scale(1.1);
-      }
-
-      footer {
-        text-align: center;
-        padding: 2rem;
-        font-size: 0.9rem;
-        color: var(--text);
-        border-top: 1px solid #ccc;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <img class="logo" src="https://i.postimg.cc/ZRWRCV5h/DESIGNDROPS1.png" alt="designdrops logo" />
-      <div style="display: flex; align-items: center;">
-        <nav>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark Mode">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGZpbGwtb3BhY2l0eT0iMC4xNiIgZD0iTTEwLjQxIDEzLjI4QzcuMzMyIDEwLjIwNSA2LjcxNiA1LjY5MyA4LjM1NyAyYy0xLjIzLjQxLTIuMjU2IDEuMjMtMy4yODEgMi4yNTZhMTAuNCAxMC40IDAgMCAwIDAgMTQuNzY4YzQuMTAyIDQuMTAyIDEwLjQ2IDMuODk3IDE0LjU2Mi0uMjA1YzEuMDI2LTEuMDI2IDEuODQ2LTIuMDUxIDIuMjU2LTMuMjgyYy0zLjg5NiAxLjQzNi04LjQwOS44Mi0xMS40ODYtMi4yNTYiLz48cGF0aCBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0iTTEwLjQxIDEzLjI4QzcuMzMyIDEwLjIwNSA2LjcxNiA1LjY5MyA4LjM1NyAyYy0xLjIzLjQxLTIuMjU2IDEuMjMtMy4yODEgMi4yNTZhMTAuNCAxMC40IDAgMCAwIDAgMTQuNzY4YzQuMTAyIDQuMTAyIDEwLjQ2IDMuODk3IDE0LjU2Mi0uMjA1YzEuMDI2LTEuMDI2IDEuODQ2LTIuMDUxIDIuMjU2LTMuMjgyYy0zLjg5NiAxLjQzNi04LjQwOS44Mi0xMS40ODYtMi4yNTYiLz48L2c+PC9zdmc+" alt="Dark Mode" />
-        </button>
+  <section>
+    <h2>What we do.</h2>
+    <div class="flex-row">
+      <div class="card">
+        <img src="https://i.postimg.cc/Nfk6TTWn/designer-1.webp" alt="Craft" />
+        <h3>Craft your website from scratch.</h3>
+        <p>With help from our professional design team.</p>
       </div>
-    </header>
-
-    <section class="hero">
-      <h1>We create next level websites.</h1>
-    </section>
-
-    <section class="content" id="services">
-      <h2>Our Services</h2>
-      <p>At designdrops.studio, we craft digital experiences that captivate and convert.</p>
-    </section>
-
-    <section class="content" id="contact">
-      <h2>Contact Us</h2>
-      <p>Let’s build something amazing together. Reach us on:</p>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/designdrops.studio/?hl=en" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-        </a>
-        <a href="https://x.com/designdrops_?s=11" target="_blank" rel="noopener">
-          <img src="https://static.vecteezy.com/system/resources/previews/053/986/348/non_2x/x-twitter-icon-logo-symbol-free-png.png" alt="Twitter" />
-        </a>
-        <a href="https://www.facebook.com/share/18YQKUzkbp/?mibextid=wwXIfr" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
-        </a>
+      <div class="card">
+        <img src="https://i.postimg.cc/mgZQSk4g/people-business-meeting-high-angle-scaled.jpg" alt="Review" />
+        <h3>Review.</h3>
+        <p>We make sure everything is absolutely perfect.</p>
       </div>
-    </section>
+      <div class="card">
+        <img src="https://i.postimg.cc/05pDRD2N/0001.webp" alt="Upload" />
+        <h3>Upload.</h3>
+        <p>We release your website for the world to see, for more clients to reach.</p>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-      &copy; 2025 designdrops.studio — All rights reserved.
-    </footer>
+  <section>
+    <h2>Our pricing.</h2>
+    <img class="pricing-image" src="https://i.postimg.cc/vZS6LvX0/Untitled.png" alt="Pricing visual" />
+    <div class="flex-row pricing">
+      <div class="card">
+        <h3>Landing Page Only | $69</h3>
+        <p>1-page scroll website. Simple, clean design. Fast and mobile-optimized. Ideal for creators.</p>
+      </div>
+      <div class="card">
+        <h3>All the essentials | $99</h3>
+        <p>1-2 Customized pages. Mobile friendly. Fast delivery. Contact forms. Free revision.</p>
+      </div>
+      <div class="card">
+        <h3>Pro Launch | $179</h3>
+        <p>Up to 3 customized pages. Domain connection. Mobile optimized. SEO. 2 revisions.</p>
+      </div>
+      <div class="card">
+        <h3>Elite Website | $249</h3>
+        <p>3+ pages. Booking, blogs, SEO, email integration. Premium design. Up to 3 revisions.</p>
+      </div>
+    </div>
+    <br>
+    <a href="https://www.instagram.com/designdrops.studio?igsh=dTIwZGF0bzRyZWVz" class="join-btn">Start now.</a>
+  </section>
 
-    <script>
-      function toggleTheme() {
-        document.body.classList.toggle('dark');
+  <section>
+    <h2>Testimonials</h2>
+    <div class="flex-row testimonials">
+      <div class="card">
+        <p>“Design drops helped with my business grow with a simple website”</p>
+        <small>– Jack Herfield, Entrepreneur</small>
+      </div>
+      <div class="card">
+        <p>“Working with Design Drops was smooth and professional”</p>
+        <small>– Louis Schofield, Botanist</small>
+      </div>
+      <div class="card">
+        <p>“Genuinely great and fast, I wasn’t expecting much but Design Drops delivered.”</p>
+        <small>– Markus Antony, Graffiti Artist</small>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <img src="https://i.postimg.cc/PqSKD7RN/image.png" alt="Call to action" style="max-width: 100%; display: block; margin: 40px auto; border-radius: 10px; animation: fadeInUp 1s ease-in-out;" />
+  </section>
+
+  <footer>
+    <p>Design Drops Team.</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/designdrops.studio?igsh=dTIwZGF0bzRyZWVz">
+        <img src="https://i.postimg.cc/wvDyzYzr/ph-instagram-logo-fill.png" alt="Instagram" />
+      </a>
+      <a href="https://www.facebook.com/share/1Baxs7wBvQ/?mibextid=wwXIfr">
+        <img src="https://i.postimg.cc/BQm84gWJ/cib-facebook.png" alt="Facebook" />
+      </a>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top" id="backToTop">↑ Top</a>
+  <script>
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
       }
-    </script>
-  </body>
+    });
+  </script>
+</body>
 </html>
