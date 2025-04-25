@@ -171,8 +171,17 @@
       from { opacity: 0; transform: translateX(20px); }
       to { opacity: 1; transform: translateX(0); }
     }
-
-    /* Media Queries for Mobile */
+    .examples .card img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    .examples .card img:hover {
+      transform: scale(1.02);
+    }
     @media (max-width: 768px) {
       .hero-section h1 {
         font-size: 2rem;
@@ -227,9 +236,9 @@
   <section>
     <h2>Our pricing.</h2>
     <video class="pricing-image" autoplay muted loop playsinline>
-  <source src="https://packaged-media.redd.it/ftpuu7bi6vve1/pb/m2-res_480p.mp4?m=DASHPlaylist.mpd&v=1&e=1745118000&s=123e02ec2096ecd9e2ac6be6f7821e9f0769d9aa" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+      <source src="https://packaged-media.redd.it/ftpuu7bi6vve1/pb/m2-res_480p.mp4?m=DASHPlaylist.mpd&v=1&e=1745118000&s=123e02ec2096ecd9e2ac6be6f7821e9f0769d9aa" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
     <div class="flex-row pricing">
       <div class="card">
@@ -267,6 +276,22 @@
       <div class="card">
         <p>“Genuinely great and fast, I wasn’t expecting much but Design Drops delivered.”</p>
         <small>– Markus Antony, Graffiti Artist</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⭐ NEW SECTION: Our Examples -->
+  <section>
+    <h2>Our Examples</h2>
+    <div class="flex-row examples">
+      <div class="card">
+        <img src="https://i.postimg.cc/bwkNF6Mk/image.png" alt="Example 1">
+      </div>
+      <div class="card">
+        <img src="https://i.postimg.cc/5tHcRjjG/image.png" alt="Example 2">
+      </div>
+      <div class="card">
+        <img src="https://i.postimg.cc/h4LkwkPS/image.png" alt="Example 3">
       </div>
     </div>
   </section>
